@@ -44,24 +44,24 @@ export default function QuiltedImageList() {
 
 const itemData = [
   {
-    img: '/wines.png',
+    img: '/wines.webp',
     title: 'Wines Web Site',
     url: 'https://wines-numen.netlify.app/',
     rows: 2,
     cols: 2,
   },
   {
-    img: '/todo.png',
+    img: '/todo.webp',
     title: 'Todo App Web Site',
     url: 'https://todo-andriy.netlify.app/',
   },
   {
-    img: '/portfolio.png',
+    img: '/portfolio.webp',
     title: 'Minimalist Portfolio Website',
     url: 'https://ak-min-portfolio.netlify.app/',
   },
   {
-    img: '/omnifood.png',
+    img: '/omnifood.webp',
     title: 'Omnifood Web Site',
     cols: 2,
     url: 'https://omnifood-andriy.netlify.app',
