@@ -3,10 +3,18 @@ import { Stack } from '@mui/system';
 import Hero from '../components/Hero';
 import NavBar from '../components/NavBar';
 import Projects from '../components/Projects';
+import Head from 'next/head';
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Tu Negocio en la Web | Marketing digital</title>
+        <meta
+          name='description'
+          content='Crea un sitio web profesional para tu empresa, alcanza el siguiente nivel.'
+        />
+      </Head>
       <NavBar />
       <Hero />
       <Projects />
