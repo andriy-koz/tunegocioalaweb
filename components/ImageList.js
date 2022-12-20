@@ -1,7 +1,8 @@
 import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import { Button } from '@mui/material';
+import Tooltip from '@mui/material/Tooltip';
+import Link from 'next/link';
 
 function srcset(image, size, rows = 1, cols = 1) {
   return {
@@ -21,20 +22,20 @@ export default function QuiltedImageList() {
       rowHeight={350}>
       {itemData.map(item => (
         <ImageListItem
+          onClick={() => (window.location.href = item.url)}
           key={item.img}
+          sx={{
+            '&:hover': {
+              cursor: 'pointer',
+              filter: 'brightness(1.1)',
+            },
+          }}
           cols={item.cols || 1}
           rows={item.rows || 1}>
           <img
             {...srcset(item.img, 121, item.rows, item.cols)}
             alt={item.title}
-            loading='lazy'
           />
-          <Button
-            variant='outlined'
-            size='small'
-            sx={{ position: 'absolute', bottom: 20, left: 15 }}>
-            Visitar sitio
-          </Button>
         </ImageListItem>
       ))}
     </ImageList>
@@ -43,22 +44,26 @@ export default function QuiltedImageList() {
 
 const itemData = [
   {
-    img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
-    title: 'Breakfast',
+    img: '/wines.png',
+    title: 'Wines Web Site',
+    url: 'https://wines-numen.netlify.app/',
     rows: 2,
     cols: 2,
   },
   {
-    img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
-    title: 'Burger',
+    img: '/todo.png',
+    title: 'Todo App Web Site',
+    url: 'https://todo-andriy.netlify.app/',
   },
   {
-    img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
-    title: 'Camera',
+    img: '/portfolio.png',
+    title: 'Minimalist Portfolio Website',
+    url: 'https://ak-min-portfolio.netlify.app/',
   },
   {
-    img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
-    title: 'Coffee',
+    img: '/omnifood.png',
+    title: 'Omnifood Web Site',
     cols: 2,
+    url: 'https://omnifood-andriy.netlify.app',
   },
 ];

@@ -9,7 +9,7 @@ import Button from '@mui/material/Button';
 
 const imagenes = [heroNotebook, heroShop, heroWeld];
 const frases = [
-  'Credibilidad y exposición para tu negocio',
+  'Credibilidad y exposición para tu empresa',
   'Sitio web profesional para agregar a tu tarjeta',
   'Siempre pensando en el cliente',
 ];

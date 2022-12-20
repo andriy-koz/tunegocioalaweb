@@ -13,7 +13,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import { Container } from '@mui/material';
+import Image from 'next/image';
+import logo from '../public/Logo.png';
+import logo2 from '../public/logo2.png';
 
 const drawerWidth = 240;
 const navItems = ['CONTACTO'];
@@ -28,9 +30,7 @@ export default function NavBar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant='h6' sx={{ my: 2 }}>
-        @TuNegocioALaWeb
-      </Typography>
+      <Image src={logo2} alt='logo 2' width={80} height={80} />
       <Divider />
       <List>
         {navItems.map(item => (
@@ -50,7 +50,9 @@ export default function NavBar(props) {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar component='nav'>
+      <AppBar
+        component='nav'
+        sx={{ backgroundColor: 'rgba(71, 138, 90, 0.8)' }}>
         <Toolbar>
           <IconButton
             color='inherit'
@@ -64,7 +66,7 @@ export default function NavBar(props) {
             variant='h6'
             component='div'
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
-            @ TuNegocioALaWeb
+            <Image src={logo} alt='logo' width={80} height={80} />
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map(item => (
