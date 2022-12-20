@@ -44,7 +44,7 @@ const Hero = () => {
               {frases[i]}
             </Typography>
             <Button variant='contained' size='large' sx={{ marginTop: 3 }}>
-              contacto
+              contanos sobre tu negocio
             </Button>
           </Box>
         </Box>

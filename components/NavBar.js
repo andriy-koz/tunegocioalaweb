@@ -16,7 +16,7 @@ import Button from '@mui/material/Button';
 import { Container } from '@mui/material';
 
 const drawerWidth = 240;
-const navItems = ['INICIO', 'PROYECTOS', 'CONTACTO'];
+const navItems = ['CONTACTO'];
 
 export default function NavBar(props) {
   const { window } = props;
