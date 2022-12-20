@@ -15,7 +15,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Image from 'next/image';
 import logo from '../public/Logo.png';
-import logo2 from '../public/logo2.png';
+import logo2 from '../public/Logo2.png';
 
 const drawerWidth = 240;
 const navItems = ['CONTACTO'];
